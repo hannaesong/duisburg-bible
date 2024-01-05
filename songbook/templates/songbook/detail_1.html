@@ -1,0 +1,26 @@
+{% extends 'mysite/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+<div class="container">
+    <a class="nav-link" href="{% url 'songbook:allsongs' %}" style="font-size: 1.2em;">Back to Songbook</a>
+</div>
+
+
+<div class="container p-4">
+    <div class="row justify-content-center">
+        <div class="col-12">
+            <h1 class="text-center mt-5">{{ song.title }}</h1>
+            <div class="text-center para px-3 py-3">
+                <p>{{ song.body|safe }}</p>
+            </div>
+        </div>
+    </div>
+    
+</div>
+    
+
+{% endblock %}

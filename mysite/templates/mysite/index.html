@@ -1,0 +1,29 @@
+{% extends 'mysite/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row align-items-center justify-content-center py-5">
+        <div class="col-11 col-lg-8 col-xl-7">
+            <img src="{% static 'mysite/LBaptism.jpeg' %}" class="img-fluid rounded">
+        </div>
+        <div class="col-11 col-lg-4 col-xl-5 my-3">
+            <h2>
+                Hey ya'll!
+            </h2>
+            <br>
+            <p>
+                This webiste is a small spot where we can collect notes and find song lyrics. 
+                You'll find everything up in the top right. 
+            </p>
+            <p>
+                If anyone wants to submit notes or song lyrics, let Hanna know!
+                She's in charge of keeping the website running.
+            </p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

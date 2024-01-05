@@ -1,0 +1,31 @@
+{% extends 'mysite/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="container text-center">
+    <h1 class="font-weight-bold text-center py-5">Notes</h1>
+
+
+<div class="container-fluid">
+    <div class="row" data-masonry='{"percentPosition": true }'>
+        {% for note in notes %}
+            <div class="col-lg-4 col-md-6">
+                <a href="{% url 'note:detail' note.slug %}">
+                    <h4 style="font-size: 1.5em;">{{ note.title }}</h4>
+                </a>
+                <h6 class="text-muted">{{ note.date|date:'M d Y'|upper }}</h6>
+                <p>{{ note.body|truncatechars:125|safe }}</p>
+            </div>
+
+        {% endfor %}
+    </div>
+
+</div>
+
+</div>
+
+
+
+{% endblock %}

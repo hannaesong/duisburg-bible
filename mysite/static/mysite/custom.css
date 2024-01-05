@@ -1,0 +1,20 @@
+.navbar-nav .nav-link {
+    color: rgba(0,0,0,1) !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: rgba(0,0,0,.5) !important;
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+    src: url('static/fonts/Nunito-VariableFont_wght.ttf') format("truetype");
+}
+
+
+p {
+  font-size: 20px;
+}
+h1 {
+    font-size: 40px;
+}

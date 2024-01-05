@@ -1,0 +1,26 @@
+{% extends 'mysite/base.html' %}
+
+{% load markdown_extras %}
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+    <a class="nav-link" href="{% url 'note:allnotes' %}" style="font-size: 1.2em;">Back to Notebook</a>
+</div>
+
+
+<div class="container p-4">
+    <h1 class="text-center mt-5 ">{{ note.title }}</h1>
+    <h6 class="text-center text-muted">{{ note.date|date:'F jS Y'}}</h6>
+
+
+        <div class="para col-12 col-xxl-11 px-3 py-3">
+            <p>{{ note.body|markdown|safe }}</p>
+        </div>    
+
+
+</div>
+
+{% endblock %}
+

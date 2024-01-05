@@ -1,0 +1,38 @@
+{% extends 'mysite/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="containter">
+    <head>
+      <h1 class="font-weight-bold text-center pt-5">About</h1>
+      <h3 class="text-center mb-4">This website</h3>
+    </head>
+  </div>
+    
+  <div class="container p-2">
+  <body>
+    <div class="row gx-4 gy-4 p-4 justify-content-center">
+      <div class="col-12 col-xxl-11 px-3 py-3 text-center">
+        <p>
+            We wanted to make it easier for everyone to access the worship lyrics. The songs are being 
+            complied and listed in alphabetical order in the 
+          <a href="{% url 'songbook:allsongs' %}">Songbook</a>.
+        </p>
+        <p>
+          There are some people that like to take notes, and we really appreciate that!
+          So we've made a home for them in <a href="{% url 'note:allnotes' %}">Notes</a>.
+          Just talk to Hanna about uploading them! 
+        </p>
+        <p>
+            We also have the <a href="{% static 'mysite/Dec2023-Feb2024.pdf' %}">Reading Plan</a>
+            which you can also download or just open right here on the website. 
+        </p>
+      </div>
+    </div>
+  
+  </body>
+  </div>
+
+{% endblock %}
