@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-p$tixvp^3#bee01b!((^8qbg!+b(h(=5%!x5jco(b-d_str$7i'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -132,4 +132,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 try: 
     from duisburg_bible.local_settings import *
 except ImportError:
-    pass
+    print("No local file, you must be in production.")
