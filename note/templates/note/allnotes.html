@@ -1,6 +1,7 @@
 {% extends 'mysite/base.html' %}
 
 {% load static %}
+{% load markdown_extras %}
 
 {% block content %}
 
@@ -16,7 +17,7 @@
                     <h4 style="font-size: 1.5em;">{{ note.title }}</h4>
                 </a>
                 <h6 class="text-muted">{{ note.date|date:'M d Y'|upper }}</h6>
-                <p>{{ note.body|truncatechars:125|safe }}</p>
+                <p>{{ note.body|markdown|striptags|truncatechars:125 }}</p>
             </div>
 
         {% endfor %}
